@@ -12,7 +12,18 @@ class List::Node //self-referential Node class
 	   Node* link = nullptr;
 	   //link is a data member which is a pointer 
 	   //to an object of the same type (i.e. Node)
+ 	Node(int new_data)
+	{
+	   data = new_data;
+	   link = nullptr;
+	}
 	
+	Node(int new_data, Node* new_link)
+	{
+	   data = new_data;
+	   link = new_link;
+	}
+		
 	};//end Node class definition (can only be seen by the List class)
 
 
@@ -65,7 +76,8 @@ void List::remove(int k)
 	     throw out_of_range("List::remove(" +to_string(k)+") failed. (valid indices are 1 to "+to_string(num_elements)+")");//throw an "out_of_range" exception
 	
 	Node* delPtr;
-	
+			
+
 	if(k == 1)
 	{
 	  delPtr = frontPtr;
@@ -79,17 +91,21 @@ void List::remove(int k)
             
             while(loc != k-1)//get pointer to (k-1)th node
 	    {
-	       tmpPtr = tmpPtr->link;
+	        tmpPtr = tmpPtr->link;
 		loc++;
 	    }
-	
+	    
 	    delPtr = tmpPtr->link;
 	    tmpPtr->link = delPtr->link;
 	  }
-	
 	delete delPtr;
 	num_elements--;
 	}
 	
 	//Implementations of missing operations
-	
+void List::display()
+{
+	for(Node* curPtr = frontPtr; curPtr !=nullptr; curPtr=curPtr->link)
+	cout<<curPtr->data<<" ";
+
+}	
