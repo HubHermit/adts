@@ -11,8 +11,7 @@ class Stack
 private:
 
       vector<int> data;
-  
-
+         
 public:
 
     // No default c'tor needs to be declared 
@@ -20,11 +19,11 @@ public:
 
 
    // No d'tor needs to be declared
-   // The vector "knows" how to destroy itself
+   // The vector "knows" how to destroy itself  
 
    int size();
 
-   void push(int);
+   void push(int num);
 
    void pop();
 

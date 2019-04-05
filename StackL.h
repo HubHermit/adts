@@ -12,7 +12,12 @@ class Stack
 private:
 
    List data;
-
+   class Node
+	{
+	  public:
+ 	 	int data =0;
+		Node* link =nullptr;
+	};
 public:
 
 // No default c'tor needs to be declared 
