@@ -9,7 +9,7 @@ int main()
  List L1, L2;
  //placing variables into the lists 
  L1.insert(100, 1);
- L1.insert(2, 2);
+ L1.insert(48, 2);
  L1.insert(56, 3);
  L2.insert(25, 1);
  L2.insert(78, 2);
