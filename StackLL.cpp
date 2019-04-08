@@ -35,7 +35,7 @@ void Stack::pop()
  	Node* delPtr = frontPtr;//new node for deletion
 	
 	frontPtr = frontPtr->link; 
-	delPtr = delPtr->link;
+	
 
 	delete delPtr;
 	num_elements--;
