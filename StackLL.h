@@ -21,7 +21,7 @@ public:
 
    int size();
 
-   void push(int);
+   void push(int num);
 
    void pop();
 
