@@ -16,10 +16,10 @@ int main()
 
 
 //displaying the lists
- cout<<"L1: ";
- L1.display();
- cout<<"\nL2: ";
- L2.display();
+
+ L1.display(1);	
+
+ L2.display(2);
  
  //removing values from lists 
  L1.remove(2);
@@ -27,7 +27,7 @@ int main()
 
  //displaying lists after removal
  cout<<"\nL1: ";
- L1.display();
+ L1.display(1);
  cout<<"\nL2: ";
- L2.display();
+ L2.display(1);
 }

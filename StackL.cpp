@@ -5,26 +5,26 @@ using namespace std;
 
 int Stack::size()
 {
-  return 0;
+  return data.size();
 }
 
-void Stack::push(int num, int k)//pushes data to the top of the stack
+void Stack::push(int num)//pushes data to the top of the stack
 {
-  
+  data.insert(num, 1);
 }
 
 void Stack::pop()//removes data from the top of the stack
 {
-	  
+  data.remove(1);
 }
 
 int Stack::top()//view value at top
 {
- 
- return 0;
+  
+ return data.display(1);
 }
 
 void Stack::clear()//clears the entire stack
 {
- 
+  data.empty();
 }

@@ -12,12 +12,7 @@ class Stack
 private:
 
    List data;
-   class Node
-	{
-	  public:
- 	 	int data =0;
-		Node* link =nullptr;
-	};
+   
 public:
 
 // No default c'tor needs to be declared 
@@ -28,7 +23,7 @@ public:
 
    int size();
 
-   void push(int num, int k);
+   void push(int);
 
    void pop();
 
